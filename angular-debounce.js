@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('debounce', [])
-  .service('debounce', ['$timeout', function ($timeout) {
+  .factory('debounce', ['$timeout', function ($timeout) {
     return function (func, wait, immediate) {
       var timeout, args, context, result;
       function debounce() {
